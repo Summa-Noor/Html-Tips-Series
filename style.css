@@ -1,0 +1,145 @@
+    /* 1. Base Dark Theme & Variables */
+    :root {
+      --main-pink: #e52f72;
+      --bg-black: #111111;
+      --card-bg: #1d1d1d;
+      --text-main: #f0f0f0;
+      --text-muted: #aaaaaa;
+      --border-color: #333333;
+      --transition-speed: 0.3s;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-black);
+      color: var(--text-main);
+      line-height: 1.6;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    /* 2. Header Section with Accent */
+    header {
+      text-align: center;
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--border-color);
+      margin-bottom: 40px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      letter-spacing: -1px;
+    }
+
+    h1 span {
+      color: var(--main-pink);
+    }
+
+    .sub-title {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+    }
+
+    /* 3. Daily Tip Card Styling */
+    ul {
+      list-style-type: none;
+    }
+
+    li {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      margin-bottom: 20px;
+      padding: 20px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all var(--transition-speed);
+    }
+
+    /* Hover effect: Accent border and elevation */
+    li:hover {
+      transform: translateY(-3px);
+      border-color: var(--main-pink);
+      box-shadow: 0 5px 15px rgba(229, 47, 114, 0.1);
+    }
+
+    /* Tip Info (Label + Title) */
+    .tip-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .tip-label {
+      font-size: 0.85rem;
+      font-weight: bold;
+      color: var(--main-pink);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+    }
+
+    .tip-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    /* 4. CTA Buttons */
+    .links-group {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn {
+      text-decoration: none;
+      padding: 10px 18px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border-radius: 6px;
+      transition: all var(--transition-speed);
+      white-space: nowrap;
+    }
+
+    /* Fill Button (Live Demo) */
+    .btn-live {
+      background-color: var(--main-pink);
+      color: #ffffff;
+      border: 1px solid var(--main-pink);
+    }
+
+    .btn-live:hover {
+      background-color: #c92160; /* Darker Pink */
+      border-color: #c92160;
+    }
+
+    /* Outline Button (Code) */
+    .btn-code {
+      background-color: transparent;
+      color: var(--text-main);
+      border: 1px solid var(--border-color);
+    }
+
+    .btn-code:hover {
+      border-color: var(--text-main);
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+    }
